@@ -51,8 +51,8 @@ public class CarroController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> DeletarCarro(@PathVariable int id) {
-        this.carroService.ListarPorId(id);
+    public ResponseEntity<Void> DeleteCarro(@PathVariable int id) {
+        this.carroService.DeleteCarro(id);
         return  ResponseEntity
                 .ok()
                 .build();
