@@ -39,7 +39,7 @@ A API estará disponível em http://localhost:8085/carros.
 
 🚀 Testando com Postman
 
-Importe o JSON da coleção de testes (Postman Collection) que acompanha o projeto.
+Aplique o JSON nas requisições que forem necessárias(POST, PUT).
  ```
   EXEMPLO:
 {
