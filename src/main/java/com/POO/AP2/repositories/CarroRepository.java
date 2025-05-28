@@ -10,19 +10,19 @@ import java.util.List;
 public class CarroRepository {
     List<Carro> carros = new ArrayList<>();
 
-    public List<Carro> ListarTodosCarros() {
+    public List<Carro> listarTodosCarros() {
         return carros;
     }
-    public Carro ListarPorId(int id) {
-        return CarroSelecionado(id);
+    public Carro listarPorId(int id) {
+        return carroSelecionado(id);
     }
-    public Carro CriarCarro(Carro carroRequest) {
+    public Carro criarCarro(Carro carroRequest) {
         this.carros.add(carroRequest);
         return carroRequest;
     }
 
-    public Carro EditarCarro(Carro carroRequest,  int id) {
-        Carro carroExistente = CarroSelecionado(id);
+    public Carro editarCarro(Carro carroRequest,  int id) {
+        Carro carroExistente = carroSelecionado(id);
 
         carroRequest.setId(carroExistente.getId());
         int index = carros.indexOf(carroExistente);
@@ -31,12 +31,12 @@ public class CarroRepository {
         return carroRequest;
     }
 
-    public void DeleteCarro(int id) {
-        Carro carroExistente = CarroSelecionado(id);
+    public void deleteCarro(int id) {
+        Carro carroExistente = carroSelecionado(id);
 
         carros.remove(carroExistente);
     }
-    private Carro CarroSelecionado (int id){
+    private Carro carroSelecionado (int id){
         return carros.stream()
                 .filter(item -> item.getId() == id)
                 .findFirst()

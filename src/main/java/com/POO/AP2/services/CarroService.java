@@ -14,23 +14,23 @@ public class CarroService {
         this.carroRepository = carroRepository;
     }
 
-    public List<Carro> ListarTodosCarros(){
-        return this.carroRepository.ListarTodosCarros();
+    public List<Carro> listarTodosCarros(){
+        return this.carroRepository.listarTodosCarros();
     }
 
-    public Carro ListarPorId (int id) {
-        return this.carroRepository.ListarPorId(id);
+    public Carro listarPorId (int id) {
+        return this.carroRepository.listarPorId(id);
     }
 
-    public Carro CriarCarro (Carro carroRequest){
-        return this.carroRepository.CriarCarro(carroRequest);
+    public Carro criarCarro (Carro carroRequest){
+        return this.carroRepository.criarCarro(carroRequest);
     }
 
-    public Carro EditarCarro (Carro carroRequest, int id){
-        return this.carroRepository.EditarCarro(carroRequest, id);
+    public Carro editarCarro (Carro carroRequest, int id){
+        return this.carroRepository.editarCarro(carroRequest, id);
     }
 
-    public void DeleteCarro (int id){
-        this.carroRepository.DeleteCarro(id);
+    public void deleteCarro (int id){
+        this.carroRepository.deleteCarro(id);
     }
 }

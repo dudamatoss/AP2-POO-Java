@@ -19,21 +19,21 @@ public class CarroController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Carro>> ListarTodosCarros() {
+    public ResponseEntity<List<Carro>> listarTodosCarros() {
         return ResponseEntity
                 .ok()
-                .body(this.carroService.ListarTodosCarros());
+                .body(this.carroService.listarTodosCarros());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Carro> ListarPorId (@PathVariable int id) {
+    public ResponseEntity<Carro> listarPorId (@PathVariable int id) {
         return ResponseEntity
-                .ok(this.carroService.ListarPorId(id));
+                .ok(this.carroService.listarPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<Carro> CriarCarro(@RequestBody Carro carroRequest) {
-        Carro carro = this.carroService.CriarCarro(carroRequest);
+    public ResponseEntity<Carro> criarCarro(@RequestBody Carro carroRequest) {
+        Carro carro = this.carroService.criarCarro(carroRequest);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(carro.getId()).toUri();
 
@@ -43,16 +43,16 @@ public class CarroController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Carro> EditarCarro(@RequestBody Carro carroRequest, @PathVariable int id) {
-        this.carroService.EditarCarro(carroRequest, id);
+    public ResponseEntity<Carro> editarCarro(@RequestBody Carro carroRequest, @PathVariable int id) {
+        this.carroService.editarCarro(carroRequest, id);
         return ResponseEntity
                 .ok()
                 .build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> DeleteCarro(@PathVariable int id) {
-        this.carroService.DeleteCarro(id);
+    public ResponseEntity<Void> deleteCarro(@PathVariable int id) {
+        this.carroService.deleteCarro(id);
         return  ResponseEntity
                 .ok()
                 .build();
