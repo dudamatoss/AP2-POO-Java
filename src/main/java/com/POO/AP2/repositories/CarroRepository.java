@@ -13,9 +13,11 @@ public class CarroRepository {
     public List<Carro> listarTodosCarros() {
         return carros;
     }
+
     public Carro listarPorId(int id) {
         return carroSelecionado(id);
     }
+
     public Carro criarCarro(Carro carroRequest) {
         this.carros.add(carroRequest);
         return carroRequest;

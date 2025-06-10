@@ -6,12 +6,19 @@ public class Carro {
     private String modelo;
     private String marca;
     private int ano;
+    private String status;
+    private  double preco;
+    private String placa;
 
-    public Carro(int id, String modelo, String marca, int ano) {
+
+    public Carro(int id, String modelo, String marca, int ano, String status, double preco, String placa) {
         this.id = id;
         this.modelo = modelo;
         this.marca = marca;
         this.ano = ano;
+        this.status = status;
+        this.preco = preco;
+        this.placa = placa;
     }
 
     public int getId() {
@@ -44,5 +51,29 @@ public class Carro {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 }
